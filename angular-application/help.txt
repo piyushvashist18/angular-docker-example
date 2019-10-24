@@ -1,0 +1,5 @@
+docker build -t example:dev .
+docker run -v ${PWD}:/app -v /app/node_modules -p 4201:4200 --rm example:dev
+#for clean cache
+docker build --no-cache -t example:dev .
+docker stop <container_name>
